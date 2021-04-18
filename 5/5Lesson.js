@@ -73,4 +73,22 @@ mac.powerOn()
 mac.powerB()
 
 
+class PC_Base extends Pc{
+    constructor(op,cpu,name='UserPC', gameName){
+        super(op,cpu,name)
+        this.gameName = gameName;
+    }
+
+    DateFPS(){
+        return this.fps = this.cpu/this.op;
+    }
+
+launchGame(){
+    console.log(`You are playing ${this.gameName} with ${this.DateFPS()} FSP`);
+}
+} 
+
+basePCHome = new PC_Base(8,5, undefined, 'NFS 3 ')
+basePCHome.launchGame()
+
 
