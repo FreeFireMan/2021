@@ -72,6 +72,10 @@ let mac = new UltraBook(8,4,'mac book', 13.1, 3)
 mac.powerOn()
 mac.powerB()
 
+// Від базвого класу потрібно створити базовий ПК.
+// В нього має бути новий метод запуску ігор.
+// Кількість FPS визначається як потужність / опервтивку.
+// Example: `You are playing *GAME_NAME* with *FPS_COUNT* FSP`
 
 class PC_Base extends Pc{
     constructor(op,cpu,name='UserPC', gameName){
@@ -86,9 +90,25 @@ class PC_Base extends Pc{
 launchGame(){
     console.log(`You are playing ${this.gameName} with ${this.DateFPS()} FSP`);
 }
+
+cpuUp(){
+    // let proc = 10;
+    // this.cpu
+     maxCpuP = this.cpuUp *0.1
+
+    if(this.cpu<this.cpu+maxcpuP){
+        this.cpu += 100
+
+    }
+}
+
 } 
 
-basePCHome = new PC_Base(8,5, undefined, 'NFS 3 ')
+
+
+
+basePCHome = new PC_Base(8,5000, undefined, 'NFS 3 ')
 basePCHome.launchGame()
+basePCHome.cpuUp()
 
 
