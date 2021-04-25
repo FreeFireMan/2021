@@ -92,11 +92,10 @@ launchGame(){
 }
 
 cpuUp(){
-    // let proc = 10;
-    // this.cpu
-     maxCpuP = this.cpuUp *0.1
+    
+     this._maxCpuP = this.cpuUp *0.1
 
-    if(this.cpu<this.cpu+maxcpuP){
+    if(this.cpu<this.cpu+this._maxCpuP){
         this.cpu += 100
 
     }
