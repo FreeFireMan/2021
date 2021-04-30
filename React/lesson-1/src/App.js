@@ -9,12 +9,7 @@ function App() {
        description={'lordfg sfsdfsdf'}
        power={'4'}
         />
-     
-     <Car
-       model={'slavuta'}
-       description={'gavno mashina'}
-       power={'0,1'}
-        />
+    
 
     </div>
   );
