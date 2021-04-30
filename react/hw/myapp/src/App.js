@@ -1,4 +1,6 @@
-let usersList = [
+import User from "./components/user/User";
+
+let users = [
 	{name: 'vasya', age: 31, status: false},
 	{name: 'petya', age: 30, status: true},
 	{name: 'kolya', age: 29, status: true},
@@ -14,10 +16,24 @@ let usersList = [
 
 
 function App() {
+  
   return (
     <div> 
+      {
+
+users.map((user,index,arr)=>
+<User 
+      key={index}
+      age={user.age}
+      status={user.status}
+      name={user.name}
+      
+
+/>
 
 
+)
+    }
     </div>
   );
 }
