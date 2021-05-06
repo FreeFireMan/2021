@@ -16,12 +16,20 @@ let users = [
 
 
 function App() {
+	use
+
+
+
+	const deleteUser =()=>{
+		users.pop();
+		console.log(users);
+	};
   
   return (
     <div> 
       {
 
-users.map((user,index,arr)=>
+users.map((user,index)=>
 <User 
       key={index}
       age={user.age}
@@ -34,6 +42,7 @@ users.map((user,index,arr)=>
 
 )
     }
+	<button onClick={deleteUser}>delete user</button>
     </div>
   );
 }
