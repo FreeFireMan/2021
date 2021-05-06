@@ -19,7 +19,12 @@ function App() {
 		{name: 'max', age: 31, status: true}
 	]);
 
-
+	let [counter, setCounter] = useState(0);
+	const addCounter=()=>{
+		
+		setCounter(++counter);
+		console.log(counter)
+	};
 
 	const deleteUser =()=>{
 		users.pop();
@@ -27,10 +32,19 @@ function App() {
 		setUsers([...users])
 		
 	};
+
   
   return (
     <div> 
-      {
+      <div>
+		  counter is {counter}
+<button onClick={addCounter}>++++</button>
+
+
+	  </div>
+	  
+	  
+	  <div>{
 
 users.map((user,index)=>
 <User 
@@ -46,7 +60,7 @@ users.map((user,index)=>
 )
     }
 	<button onClick={deleteUser}>delete user</button>
-	
+	</div>
     </div>
   );
 }
