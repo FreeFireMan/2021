@@ -1,0 +1,17 @@
+Index: react/hw/myapp/src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import User from \"./components/user/User\";\nimport {useState} from 'react';\n\n\n\n\nfunction App() {\n\tlet [users, setUsers]= useState([\n\t\t{name: 'vasya', age: 31, status: false},\n\t\t{name: 'petya', age: 30, status: true},\n\t\t{name: 'kolya', age: 29, status: true},\n\t\t{name: 'olya', age: 28, status: false},\n\t\t{name: 'max', age: 30, status: true},\n\t\t{name: 'anya', age: 31, status: false},\n\t\t{name: 'oleg', age: 28, status: false},\n\t\t{name: 'andrey', age: 29, status: true},\n\t\t{name: 'masha', age: 30, status: true},\n\t\t{name: 'olya', age: 31, status: false},\n\t\t{name: 'max', age: 31, status: true}\n\t]);\n\n\t\n\n\tconst deleteUser =()=>{\n\t\tusers.pop();\n\t\tconsole.log(users);\n\t\tsetUsers([...users])\n\t\t\n\t};\n\tlet [counter, setCounter] = useState(0);\n\tconst addCounter=()=>{\n\t\t\n\t\tsetCounter(++counter);\n\t\tconsole.log(counter)\n\t};\n  \n  return (\n    <div> \n      <div>\n\t\t  counter is {counter}\n<button onClick={addCounter}>++++</button>\n\n\n\t  </div>\n\t  \n\t  \n\t  <div>{\n\nusers.map((user,index)=>\n<User \n      key={index}\n      age={user.age}\n      status={user.status}\n      name={user.name}\n      \n\n/>\n\n\n)\n    }\n\t<button onClick={deleteUser}>delete user</button>\n\t</div>\n    </div>\n  );\n}\n\nexport default App;\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/react/hw/myapp/src/App.js b/react/hw/myapp/src/App.js
+--- a/react/hw/myapp/src/App.js	(revision 2e350116722230d4eaa5fda8add149791260474a)
++++ b/react/hw/myapp/src/App.js	(date 1620649000020)
+@@ -65,4 +65,4 @@
+   );
+ }
+ 
+-export default App;
++export default App;
+\ No newline at end of file

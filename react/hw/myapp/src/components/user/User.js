@@ -1,13 +1,14 @@
-export default function User(props){
-let {age, status, name} = props;
+export default function User({item}){
+
 
     return(
         <div>
-            <p>{name} {status.toString()}</p>
-            <div><b>{age}</b></div>
-            
-
-
+           <h1>{item.id} - {item.name} - {item.age}</h1>
+            <div>
+                <b>city: {item.address.city} </b><br></br>
+                street: {item.address.street}<br></br>
+                numberOfRoom#: - {item.address.number}<br></br>
+            </div>
             
             
         </div>
