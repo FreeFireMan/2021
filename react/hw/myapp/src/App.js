@@ -21,7 +21,7 @@ function App() {
     <div> 
       {
 
-users.map((user,index,arr)=>
+users.map((user,index)=>
 <User 
       key={index}
       age={user.age}
